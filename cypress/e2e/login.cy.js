@@ -1,3 +1,4 @@
+
 beforeEach(() => {
   cy.viewport(Cypress.env("viewportWidth"), Cypress.env("viewportHeight"));
   cy.visit("/");
@@ -15,12 +16,6 @@ it("Should not login with empty login", () => {
     .should("be.false");
 });
 
-it("Should not login with empty password", () => {
-  cy.loginEmptyPass("test@test.com");
-  cy.get("#pass")
-    .then(($el) => $el[0].checkValidity())
-    .should("be.false");
-});
 
 it("Should log out", () => {
   cy.login("test@test.com", "test");

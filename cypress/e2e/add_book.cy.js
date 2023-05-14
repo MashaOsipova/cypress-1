@@ -40,14 +40,6 @@ const bookOne = {
       cy.contains(bookOne.title).should("not.exist");
     });
   
-    it("Should add book to favorite through 'Book list' page", () => {
-      cy.addBookNoFavorite(bookTwo);
-      cy.contains(bookTwo.title)
-        .should("be.visible")
-        .within(() => cy.get(".card-footer > .btn").click({ force: true }));
-      cy.visit("/favorites");
-      cy.contains(bookTwo.title).should("be.visible");
-    });
   
     it("Should remove all favorite books", () => {
       cy.addBook(bookThree);

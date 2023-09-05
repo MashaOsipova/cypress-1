@@ -1,22 +1,18 @@
 {
-  "name": "cypress1",
+  "name": "jsaqa_cypress_1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
-  "devDependencies": {},
   "scripts": {
-    "testChrome":"npx cypress run --browser chrome --headless",
-    "testFirefox": "npx cypress run --browser firefox --headless",
-    "testChromeMobile": "npx cypress run --browser ChromeMobile --headed --config-file cypressmobile.env.js",
-    "testFirefoxMobile": "npx cypress run --browser FirefoxMobile --headed --config-file cypressmobile.env.js"
+    "test:mobHead": "cypress run --browser chrome --headed --config-file cypress.mobile.config.js",
+    "test:mob": "cypress run --browser chrome --config-file cypress.mobile.config.js",
+    "test:noteHead": "cypress run --browser edge --headed --config-file cypress.notebook.config.js",
+    "test:note": "cypress run --browser edge --config-file cypress.notebook.config.js"
   },
-  "keywords": [
-    "cypress"
-],
-"author": "",
-"license": "ISC",
-"dependencies": {
-    "cypress": "^10.3.1"
-}
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.11.0"
+  }
 }
